@@ -1,0 +1,177 @@
+<!--META
+{
+ "path": "index.html",
+ "nav": "",
+ "og": "index",
+ "title": "Agence vidéo et boîte de prod à Paris | Pour Faire Simple.",
+ "og_title": "Pour Faire Simple. Agence vidéo et boîte de prod à Paris depuis 2013",
+ "description": "Pour Faire Simple. est l'agence vidéo des PME et la boîte de prod des agences à Paris depuis 2013 : film corporate, motion design, social ads, podcast.",
+ "kicker": "Agence vidéo · Paris · depuis 2013",
+ "priority": "1.0", "changefreq": "weekly",
+ "seo_note": "Requête cible : « agence vidéo Paris » et « société de production audiovisuelle Paris ». H1 unique = promesse de marque, H2 formulés en questions d'acheteur.\n  JSON-LD Organization + LocalBusiness (NAP identique à toutes les pages, geo, horaires, sameAs). Réponse directe GEO de 3 phrases sous le hero, chiffres vérifiables mis en avant.\n  Maillage : deux parcours (PME / agences), 6 réalisations, 2 offres, méthode, FAQ, ressources. Hero vidéo en boucle muette avec poster, lazy loading sur toutes les vignettes.",
+ "jsonld_py": "[{'@type': 'ItemList', 'name': 'Réalisations sélectionnées', 'itemListElement': [{'@type': 'ListItem', 'position': i+1, 'item': video_ld(p)} for i, p in enumerate([q for q in PROJECTS if q['order'] <= 6])]}]"
+}
+-->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__media" aria-hidden="true">
+    <!-- SHOWREEL : remplacer showreel-placeholder.webm par le vrai showreel (mp4 H.264 + webm), 10 à 20 s, sans son, < 4 Mo. -->
+    <video autoplay muted loop playsinline preload="metadata" poster="{{root}}assets/img/posters/showreel.svg" width="1600" height="900">
+      <source src="{{root}}assets/video/showreel-placeholder.webm" type="video/webm">
+    </video>
+  </div>
+  <div class="hero__grain" aria-hidden="true"></div>
+  <p class="hero__meta"><span class="rec" aria-hidden="true"></span> Showreel 2026 · boucle muette</p>
+  <div class="container hero__inner">
+    <h1 class="h-hero hero__title" id="hero-title"><span class="line">Le bon message,</span><span class="line">aux bonnes personnes,</span><span class="line"><span class="voice">de la bonne manière</span><span class="dot">.</span></span></h1>
+    <div class="hero__row">
+      <p class="hero__lead">Pour Faire Simple. est une agence vidéo et société de production audiovisuelle à Paris, créée en 2013. Nous concevons et produisons films corporate, motion design 2D et 3D, social ads et podcasts pour les PME, et nous produisons en marque blanche pour les agences de communication.</p>
+      <a class="btn btn--primary btn--lg" href="{{root}}contact.html">Parlons de votre projet <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <span class="hero__scroll" aria-hidden="true">Défiler</span>
+</section>
+
+{{py: marquee(root)}}
+
+<section class="section" aria-labelledby="pourqui-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="h-xl" id="pourqui-title">Vous cherchez une agence vidéo, ou une boîte de prod<span class="dot">&nbsp;?</span></h2>
+      <p class="lead">Deux métiers, deux parcours. Les PME nous parlent d'objectifs de communication. Les agences nous parlent de plannings et de livrables. On répond aux deux, mais pas de la même façon.</p>
+    </div>
+    <div class="grid grid--2 reveal--stagger">
+      <a class="card" href="{{root}}agence-video.html">
+        <span class="card__num">01 — PME et ETI</span>
+        <h3>L'agence vidéo qui commence par votre objectif</h3>
+        <p>Conseil en stratégie de contenu, conception, tournage, motion design, montage et diffusion. Un interlocuteur du brief à la mise en ligne, des délais et un budget annoncés dès le devis.</p>
+        <span class="card__foot link-arrow">Découvrir l'agence vidéo</span>
+      </a>
+      <a class="card" href="{{root}}boite-de-prod.html">
+        <span class="card__num">02 — Agences de communication</span>
+        <h3>La boîte de prod en marque blanche, depuis 2015</h3>
+        <p>Nous prenons en charge tout ou partie de la production vidéo de vos clients, sous votre marque. Santé, banque, assurance et industrie : des secteurs où l'on connaît les circuits de validation.</p>
+        <span class="card__foot link-arrow">Découvrir la boîte de prod</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--line" aria-labelledby="chiffres-title">
+  <div class="container">
+    <h2 class="visually-hidden" id="chiffres-title">Pour Faire Simple. en chiffres</h2>
+    <div class="stats reveal--stagger">
+      <div class="stat"><div class="stat__num" data-count="2013">2013</div><p class="stat__label">Année de création, avec des racines dans le motion design.</p></div>
+      <div class="stat"><div class="stat__num"><span data-count="3">3</span> à <span data-count="15">15</span> s</div><p class="stat__label">La durée des vidéos de l'offre Pour Faire Court., à prix fixe.</p></div>
+      <div class="stat"><div class="stat__num" data-count="2" data-prefix="J+">J+2</div><p class="stat__label">Le délai de réponse à toute demande de devis, avec une première estimation.</p></div>
+      <div class="stat"><div class="stat__num" data-count="150" data-suffix="+">150+</div><p class="stat__label">Films livrés depuis 2013 <span class="tovalidate">À valider avec le client</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="real-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="h-xl" id="real-title">Que produisons-nous, concrètement<span class="dot">&nbsp;?</span></h2>
+      <p class="lead">Films corporate et institutionnels, motion design 2D et 3D, social ads, portraits RH, captations et podcasts. Survolez une vignette pour lancer l'aperçu.</p>
+    </div>
+    <div class="work-grid reveal--stagger">
+      {{py: "".join(project_card(p, root) for p in sorted(PROJECTS, key=lambda q: q["order"]) if p["order"] <= 6)}}
+    </div>
+    <p class="mt-7 reveal"><a class="btn" href="{{root}}realisations.html">Toutes les réalisations <span class="arrow" aria-hidden="true">→</span></a></p>
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal__box">
+        <button class="modal__close" type="button" aria-label="Fermer l'aperçu">×</button>
+        <img id="modal-img" src="{{root}}assets/img/posters/showreel.svg" alt="" width="1600" height="900" loading="lazy">
+        <h3 id="modal-title" class="h-lg"></h3>
+        <p id="modal-sub" class="muted mt-0"></p>
+        <p class="small mt-0"><span class="tovalidate">Fiche à venir</span> Cette réalisation aura sa page dédiée avec vidéo, enjeu, dispositif et livrables.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="offres-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="h-xl" id="offres-title">Deux offres à prix fixe, pour les besoins qui reviennent<span class="dot">.</span></h2>
+      <p class="lead">Le sur-mesure reste la règle. Mais deux besoins reviennent si souvent qu'on les a packagés, avec un prix, un délai et un nombre de livrables annoncés.</p>
+    </div>
+    <div class="grid grid--2 reveal--stagger">
+      <a class="card card--emoji card--accent" href="{{root}}offre-pour-faire-court.html">
+        <span class="card__emoji" aria-hidden="true">🌭</span>
+        <h3>Pour Faire Court.</h3>
+        <p>Des vidéos de 3 à 15 secondes pour vos réseaux sociaux, à prix fixe, avec ou sans abonnement. Du snack content qui se mange vite et se produit en un temps record.</p>
+        <span class="card__foot link-arrow">Voir l'offre snack content</span>
+      </a>
+      <a class="card card--emoji" href="{{root}}offre-raconte.html">
+        <span class="card__emoji" aria-hidden="true">🦫</span>
+        <h3>Raconte...</h3>
+        <p>Une capsule vidéo incarnée de 2 à 3 minutes, plus son teaser, pour présenter votre métier, votre entreprise ou les personnes clés de votre équipe. Authentique et abordable.</p>
+        <span class="card__foot link-arrow">Voir l'offre capsules incarnées</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--line" aria-labelledby="methode-title">
+  <div class="container split">
+    <div class="reveal">
+      <p class="eyebrow">Méthode</p>
+      <h2 class="h-xl" id="methode-title">Comment se déroule une production avec nous<span class="dot">&nbsp;?</span></h2>
+      <p class="lead mt-6">Une production vidéo se déroule en six étapes, du brief à la diffusion, avec un interlocuteur unique. Pour un film corporate de 2 à 3 minutes, comptez 4 à 8 semaines entre le premier appel et le fichier final.</p>
+      <p><a class="link-arrow" href="{{root}}methode.html">Lire la méthode étape par étape</a></p>
+    </div>
+    <ul class="list-lines reveal--stagger">
+      <li><span class="n">01</span><div><strong>Brief et conseil</strong><p>On clarifie l'objectif, la cible et le canal avant de parler de format. Un appel de 20 minutes suffit souvent.</p></div></li>
+      <li><span class="n">02</span><div><strong>Conception</strong><p>Note d'intention, script, storyboard ou moodboard selon le format. Vous validez avant que la caméra ne tourne.</p></div></li>
+      <li><span class="n">03</span><div><strong>Production</strong><p>Tournage ou animation, avec une équipe dimensionnée au projet, jamais plus grosse que nécessaire.</p></div></li>
+      <li><span class="n">04</span><div><strong>Post-production et livraison</strong><p>Montage, motion, mixage, étalonnage, sous-titres. Deux allers-retours inclus, fichiers livrés dans tous les formats de diffusion.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="pourquoi-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="h-xl" id="pourquoi-title">Pourquoi des entreprises nous confient leurs films depuis 2013<span class="dot">&nbsp;?</span></h2>
+      <p class="lead">Parce qu'on a gardé une culture d'atelier : on conçoit, on produit et on répond au téléphone. Trois raisons que nos clients citent le plus souvent.</p>
+    </div>
+    <div class="grid grid--3 reveal--stagger">
+      <div class="card"><span class="card__num">Conseil</span><h3>On commence par « pourquoi »</h3><p>Nés dans le motion design, devenus société de production généraliste puis agence vidéo, nous apportons du conseil en stratégie de contenu avant de choisir un format.</p></div>
+      <div class="card"><span class="card__num">Sur-mesure</span><h3>Pas de catalogue subi</h3><p>Chaque projet a son dispositif : prises de vues réelles, motion design 2D ou 3D, hybride. Le format suit l'objectif et le budget, pas l'inverse.</p></div>
+      <div class="card"><span class="card__num">Service</span><h3>Une obsession : vous simplifier la vie</h3><p>Un interlocuteur, un planning partagé, des délais tenus. C'est ce qui fait que des agences nous confient leurs productions en marque blanche depuis 2015.</p></div>
+    </div>
+    <div class="switch-track mt-7 reveal">
+      <div><h3 class="h-lg">Vous êtes une agence de communication ?</h3><p>Nous produisons vos films sous votre marque : devis, planning et livrables au format de votre agence. Découvrez le parcours marque blanche.</p></div>
+      <a class="btn" href="{{root}}boite-de-prod.html">Le parcours boîte de prod <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-home-title">
+  <div class="container split">
+    <div class="reveal">
+      <p class="eyebrow">Questions fréquentes</p>
+      <h2 class="h-xl" id="faq-home-title">Les questions qu'on nous pose avant de signer<span class="dot">.</span></h2>
+      <p class="mt-6"><a class="link-arrow" href="{{root}}faq.html">Voir les 18 questions et réponses</a></p>
+    </div>
+    <ul class="faq reveal">
+      <li><details><summary>Combien coûte une vidéo d'entreprise ?</summary><div class="faq__body"><p>Une vidéo corporate coûte le plus souvent entre 3 000 et 15 000 € HT à Paris en 2026, selon la durée, le nombre de jours de tournage et la part de motion design. Une capsule de l'offre Raconte... démarre nettement plus bas, une publicité TV avec comédiens peut dépasser 30 000 €. <a href="{{root}}ressources/combien-coute-une-video-corporate-2026.html">Notre article détaille chaque poste.</a></p></div></details></li>
+      <li><details><summary>Combien de temps prend une production vidéo ?</summary><div class="faq__body"><p>Comptez 4 à 8 semaines pour un film corporate, 3 à 6 semaines pour une vidéo en motion design de 60 à 90 secondes, et 5 à 10 jours ouvrés pour une série de snack content. Les délais dépendent surtout de vos temps de validation.</p></div></details></li>
+      <li><details><summary>Motion design ou prises de vues réelles ?</summary><div class="faq__body"><p>Le motion design explique un concept abstrait, un logiciel ou un process. Les prises de vues réelles incarnent des personnes, des lieux et des émotions. Beaucoup de films combinent les deux. <a href="{{root}}ressources/quel-format-video-choisir-selon-votre-objectif.html">Notre guide compare les formats selon l'objectif.</a></p></div></details></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--line" aria-labelledby="ressources-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="h-xl" id="ressources-title">Avant de nous appeler, lisez ceci<span class="dot">.</span></h2>
+      <p class="lead">Deux guides écrits pour les dirigeants et les responsables communication qui achètent de la vidéo pour la première fois, ou la dixième.</p>
+    </div>
+    <div class="grid grid--2 reveal--stagger">
+      <a class="card" href="{{root}}ressources/combien-coute-une-video-corporate-2026.html"><span class="card__num">Guide · 6 min de lecture</span><h3>Combien coûte une vidéo corporate en 2026 ?</h3><p>Fourchettes par format, postes de dépense, ce qui fait monter ou baisser la facture, et comment lire un devis.</p><span class="card__foot link-arrow">Lire le guide des prix</span></a>
+      <a class="card" href="{{root}}ressources/quel-format-video-choisir-selon-votre-objectif.html"><span class="card__num">Guide · 6 min de lecture</span><h3>Quel format vidéo choisir selon votre objectif de communication ?</h3><p>Notoriété, recrutement, vente, formation : le format qui sert chaque objectif, avec durées, canaux et budgets.</p><span class="card__foot link-arrow">Lire le guide des formats</span></a>
+    </div>
+  </div>
+</section>

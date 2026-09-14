@@ -1,0 +1,121 @@
+[
+ {
+  "path": "404.html",
+  "title": "Page introuvable, mais on a sûrement le film qu'il vous faut",
+  "og": "index",
+  "og_title": "Page introuvable — Pour Faire Simple.",
+  "kicker": "404"
+ },
+ {
+  "path": "agence-video.html",
+  "title": "Agence vidéo pour PME à Paris : film corporate et motion",
+  "og": "agence-video",
+  "og_title": "Agence vidéo pour les PME à Paris — Pour Faire Simple.",
+  "kicker": "Parcours PME · Agence vidéo"
+ },
+ {
+  "path": "ressources/quel-format-video-choisir-selon-votre-objectif.html",
+  "title": "Quel format vidéo choisir selon votre objectif ? Guide 2026",
+  "og": "article-formats",
+  "og_title": "Quel format vidéo choisir selon votre objectif de communication ? Le guide 2026",
+  "kicker": "Guide des formats · 2026"
+ },
+ {
+  "path": "ressources/combien-coute-une-video-corporate-2026.html",
+  "title": "Combien coûte une vidéo corporate en 2026 ? Fourchettes",
+  "og": "article-prix",
+  "og_title": "Combien coûte une vidéo corporate en 2026 ? Fourchettes de prix par format",
+  "kicker": "Guide des prix · 2026"
+ },
+ {
+  "path": "boite-de-prod.html",
+  "title": "Boîte de prod pour agences : vidéo en marque blanche, Paris",
+  "og": "boite-de-prod",
+  "og_title": "Boîte de prod en marque blanche pour les agences — Pour Faire Simple.",
+  "kicker": "Parcours agences · Marque blanche"
+ },
+ {
+  "path": "contact.html",
+  "title": "Contact et devis vidéo à Paris : votre projet en 5 questions",
+  "og": "contact",
+  "og_title": "Parlons de votre projet — devis vidéo sous 48 h",
+  "kicker": "Contact · réponse sous 48 h"
+ },
+ {
+  "path": "faq.html",
+  "title": "FAQ agence vidéo : prix, délais, droits, formats, tournage",
+  "og": "faq",
+  "og_title": "FAQ — 18 questions sur les prix, délais, droits et formats d'une production vidéo",
+  "kicker": "FAQ · 18 questions, réponses de 40 à 80 mots"
+ },
+ {
+  "path": "index.html",
+  "title": "Agence vidéo et boîte de prod à Paris | Pour Faire Simple.",
+  "og": "index",
+  "og_title": "Pour Faire Simple. Agence vidéo et boîte de prod à Paris depuis 2013",
+  "kicker": "Agence vidéo · Paris · depuis 2013"
+ },
+ {
+  "path": "mentions-legales.html",
+  "title": "Mentions légales et conditions générales de vente | PFS",
+  "og": "mentions-legales",
+  "og_title": "Mentions légales et CGV — Pour Faire Simple.",
+  "kicker": "Mentions légales · CGV · Données personnelles"
+ },
+ {
+  "path": "methode.html",
+  "title": "Comment se déroule une production vidéo ? Méthode 6 étapes",
+  "og": "methode",
+  "og_title": "Comment se déroule une production vidéo ? La méthode Pour Faire Simple. en 6 étapes",
+  "kicker": "Méthode · du brief à la diffusion"
+ },
+ {
+  "path": "offre-pour-faire-court.html",
+  "title": "Pour Faire Court. : vidéos courtes réseaux sociaux prix fixe",
+  "og": "offre-pour-faire-court",
+  "og_title": "Pour Faire Court. 🌭 Snack content vidéo à prix fixe, avec ou sans abonnement",
+  "kicker": "Offre packagée · Snack content 🌭"
+ },
+ {
+  "path": "offre-raconte.html",
+  "title": "Raconte... : capsule vidéo incarnée + teaser pour votre PME",
+  "og": "offre-raconte",
+  "og_title": "Raconte... 🦫 Une capsule vidéo incarnée, authentique et abordable, plus son teaser",
+  "kicker": "Offre packagée · Capsules incarnées 🦫"
+ },
+ {
+  "path": "realisations/segafredo-brand-content.html",
+  "title": "Segafredo, film de marque TV et digital : étude de cas brand",
+  "og": "real-segafredo",
+  "og_title": "Étude de cas — Segafredo, le rituel du matin, film de marque 45 s",
+  "kicker": "Étude de cas · Brand content · Food"
+ },
+ {
+  "path": "realisations/sncf-serie-onboarding.html",
+  "title": "SNCF, série d'onboarding vidéo : étude de cas film corporate",
+  "og": "real-sncf",
+  "og_title": "Étude de cas — SNCF, une série d'onboarding en six épisodes",
+  "kicker": "Étude de cas · Film corporate · Transport"
+ },
+ {
+  "path": "realisations/trade-republic-social-ads-motion.html",
+  "title": "Trade Republic, social ads en motion design : étude de cas",
+  "og": "real-trade-republic",
+  "og_title": "Étude de cas — Trade Republic, investir expliqué en 15 secondes",
+  "kicker": "Étude de cas · Social ads · Finance"
+ },
+ {
+  "path": "realisations.html",
+  "title": "Réalisations vidéo : films corporate, motion design, social",
+  "og": "realisations",
+  "og_title": "Réalisations — films corporate, motion design, social ads et podcasts par Pour Faire Simple.",
+  "kicker": "Réalisations · filtrables par format et secteur"
+ },
+ {
+  "path": "ressources.html",
+  "title": "Ressources vidéo : prix, formats, glossaire pour acheter",
+  "og": "ressources",
+  "og_title": "Ressources — guides des prix et des formats vidéo, glossaire du métier",
+  "kicker": "Ressources · guides et glossaire"
+ }
+]

@@ -1,0 +1,64 @@
+<!--META
+{
+ "path": "ressources.html",
+ "nav": "ressources.html",
+ "og": "ressources",
+ "title": "Ressources vidéo : prix, formats, glossaire pour acheter",
+ "og_title": "Ressources — guides des prix et des formats vidéo, glossaire du métier",
+ "description": "Guides pour acheter de la vidéo en connaissance de cause : combien coûte une vidéo corporate en 2026, quel format choisir selon l'objectif, glossaire 12 mots.",
+ "kicker": "Ressources · guides et glossaire",
+ "priority": "0.8",
+ "type": "CollectionPage",
+ "breadcrumb": [["Ressources", ""]],
+ "seo_note": "Hub de contenu : requêtes informationnelles (« prix vidéo corporate », « quel format vidéo choisir », « définition snack content », « qu'est-ce que le brand content »). Corrige la faiblesse n°4 du site actuel (contenu trop mince).\n  JSON-LD CollectionPage + DefinedTermSet de 12 termes (glossaire citable) + BreadcrumbList. Chaque définition est courte, autoportante, et reprise à l'identique dans le balisage.\n  Maillage : deux articles complets, FAQ, méthode, offres. Les définitions renvoient vers les pages de service concernées.",
+ "jsonld_py": "[{'@type': 'DefinedTermSet', '@id': url + '#glossaire', 'name': 'Glossaire de la production vidéo', 'hasDefinedTerm': [{'@type': 'DefinedTerm', 'name': t, 'description': d, 'inDefinedTermSet': url + '#glossaire', 'url': url + '#' + s} for s, t, d in GLOSSARY]}]"
+}
+-->
+<section class="hero hero--page" aria-labelledby="page-title">
+  <div class="container">
+    {{breadcrumb}}
+    <p class="eyebrow">Ressources</p>
+    <h1 class="display" id="page-title">Acheter de la vidéo <span class="voice">en connaissance de cause</span><span class="dot">.</span></h1>
+    <div class="answer-box">
+      <p>Cette page rassemble ce qu'un dirigeant ou un responsable communication doit savoir avant de commander une vidéo : les fourchettes de prix 2026 par format, le format à choisir selon l'objectif, et un glossaire de douze termes du métier. Tout est écrit par l'équipe de Pour Faire Simple., agence vidéo à Paris depuis 2013, sans jargon et avec des chiffres.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--line" aria-labelledby="guides-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="h-xl" id="guides-title">Deux guides complets<span class="dot">.</span></h2>
+      <p class="lead">Six minutes de lecture chacun. Structurés en questions, avec des tableaux, pour être lus en diagonale ou cités tels quels.</p>
+    </div>
+    <div class="grid grid--2 reveal--stagger">
+      <a class="card" href="{{root}}ressources/combien-coute-une-video-corporate-2026.html"><span class="card__num">Guide des prix · 14 septembre 2026</span><h3>Combien coûte une vidéo corporate en 2026 ?</h3><p>Fourchettes par format, les sept postes d'un devis, ce qui fait monter ou baisser la facture, et trois exemples de budgets.</p><span class="card__foot link-arrow">Lire le guide des prix</span></a>
+      <a class="card" href="{{root}}ressources/quel-format-video-choisir-selon-votre-objectif.html"><span class="card__num">Guide des formats · 14 septembre 2026</span><h3>Quel format vidéo choisir selon votre objectif de communication ?</h3><p>Notoriété, considération, conversion, recrutement, formation : le format qui sert chaque objectif, avec durées, canaux et budgets.</p><span class="card__foot link-arrow">Lire le guide des formats</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="glossaire" aria-labelledby="glossaire-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="h-xl" id="glossaire-title">Glossaire : les mots du métier, en une phrase ou deux<span class="dot">.</span></h2>
+      <p class="lead">Douze termes que vous lirez dans nos devis et dans ceux de nos confrères. Définitions courtes, citables, écrites pour être comprises sans contexte.</p>
+    </div>
+    <dl class="glossary reveal">
+      {{py: "".join(f'<div id="{s}"><dt>{esc(t)}</dt><dd>{esc(d)}</dd></div>' for s, t, d in GLOSSARY)}}
+    </dl>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-res-title">
+  <div class="container split">
+    <div class="reveal">
+      <h2 class="h-xl" id="faq-res-title">Et les questions pratiques<span class="dot">&nbsp;?</span></h2>
+      <p class="lead mt-6">Prix, délais, droits, paiement, formats de livraison : la FAQ répond en 40 à 80 mots à 18 questions, et la page méthode détaille le déroulé d'une production.</p>
+    </div>
+    <div class="grid reveal--stagger">
+      <a class="card" href="{{root}}faq.html"><span class="card__num">FAQ</span><h3>18 questions, 18 réponses courtes</h3><p>Formulées comme on les pose, balisées pour les moteurs de recherche et les assistants IA.</p><span class="card__foot link-arrow">Lire la FAQ</span></a>
+      <a class="card" href="{{root}}methode.html"><span class="card__num">Méthode</span><h3>Le déroulé d'une production en six étapes</h3><p>Délais, rôles et livrables à chaque étape, du brief à la diffusion.</p><span class="card__foot link-arrow">Lire la méthode</span></a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<!--META
+{
+ "path": "404.html",
+ "nav": "",
+ "og": "index",
+ "title": "Page introuvable, mais on a sûrement le film qu'il vous faut",
+ "og_title": "Page introuvable — Pour Faire Simple.",
+ "description": "Cette page n'existe pas ou a été déplacée. Retrouvez l'agence vidéo, la boîte de prod, les réalisations, la méthode et les ressources de Pour Faire Simple.",
+ "kicker": "404",
+ "robots": "noindex, follow",
+ "nositemap": true,
+ "no_endcard": true,
+ "seo_note": "Page 404 en noindex, follow : elle n'est pas indexée mais transmet la navigation vers les pages clés. Netlify et Vercel la servent automatiquement sur les URL inconnues.\n  Ton de la marque conservé, liens vers les six entrées principales et le formulaire de contact.\n  Pas de redirection automatique : l'utilisateur choisit."
+}
+-->
+<section class="notfound" aria-labelledby="page-title">
+  <div class="container">
+    <p class="display" aria-hidden="true">404<span class="dot">.</span></p>
+    <h1 class="h-xl" id="page-title">Cette page n'existe pas. <span class="voice">Coupez, on la refait.</span></h1>
+    <p class="lead mt-6" style="margin-inline:auto">L'adresse a peut-être changé avec la refonte du site. Voici où reprendre.</p>
+    <nav class="cluster mt-6" aria-label="Pages principales" style="justify-content:center">
+      <a class="btn btn--primary" href="{{root}}index.html">Accueil</a>
+      <a class="btn" href="{{root}}agence-video.html">Agence vidéo</a>
+      <a class="btn" href="{{root}}boite-de-prod.html">Boîte de prod</a>
+      <a class="btn" href="{{root}}realisations.html">Réalisations</a>
+      <a class="btn" href="{{root}}ressources.html">Ressources</a>
+      <a class="btn" href="{{root}}contact.html">Contact</a>
+    </nav>
+  </div>
+</section>

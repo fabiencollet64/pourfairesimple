@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!--
+  CHOIX SEO DE CETTE PAGE
+  Requête cible : « réalisations agence vidéo », « exemples film corporate », « portfolio motion design ». Corrige la faiblesse n°1 du site actuel : un portfolio on-site indexable au lieu d'un lien Vimeo.
+  JSON-LD ItemList de 12 VideoObject (thumbnail, durée, date, genre) + BreadcrumbList. Filtres JS par format et secteur, état vide géré, pré-filtrage via ?format= et ?secteur= depuis les pages de service.
+  Chaque réalisation renvoie vers l'offre ou le parcours correspondant ; 3 études de cas détaillées, 9 fiches à venir en modale (aucun lien mort).
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Réalisations vidéo : films corporate, motion design, social</title>
+  <meta name="description" content="Nos réalisations vidéo à Paris, filtrables par format et par secteur : films corporate, motion design 2D et 3D, social ads, portraits RH, captation, podcast.">
+  <link rel="canonical" href="https://www.pourfairesimple.fr/realisations.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Pour Faire Simple.">
+  <meta name="theme-color" content="#0c0c0d">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pour Faire Simple.">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://www.pourfairesimple.fr/realisations.html">
+  <meta property="og:title" content="Réalisations — films corporate, motion design, social ads et podcasts par Pour Faire Simple.">
+  <meta property="og:description" content="Nos réalisations vidéo à Paris, filtrables par format et par secteur : films corporate, motion design 2D et 3D, social ads, portraits RH, captation, podcast.">
+  <meta property="og:image" content="https://www.pourfairesimple.fr/assets/img/og/realisations.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Réalisations — films corporate, motion design, social ads et podcasts par Pour Faire Simple.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Réalisations — films corporate, motion design, social ads et podcasts par Pour Faire Simple.">
+  <meta name="twitter:description" content="Nos réalisations vidéo à Paris, filtrables par format et par secteur : films corporate, motion design 2D et 3D, social ads, portraits RH, captation, podcast.">
+  <meta name="twitter:image" content="https://www.pourfairesimple.fr/assets/img/og/realisations.png">
+  <meta name="twitter:image:alt" content="Réalisations — films corporate, motion design, social ads et podcasts par Pour Faire Simple.">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://www.pourfairesimple.fr/#organization",
+   "name": "Pour Faire Simple.",
+   "legalName": "Pour Faire Simple",
+   "url": "https://www.pourfairesimple.fr/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.pourfairesimple.fr/assets/img/logo.svg",
+    "width": 512,
+    "height": 512
+   },
+   "foundingDate": "2013",
+   "description": "Pour Faire Simple. est une agence vidéo et société de production audiovisuelle à Paris, créée en 2013. Périmètre : brand content, publicité TV, motion design 2D et 3D, social ads, films corporate et institutionnels, portraits RH, captation d'événements, contenus d'onboarding et de culture d'entreprise, case studies, témoignages, interviews, UGC, snack content, podcast audio et vidéo.",
+   "email": "bonjour@pourfairesimple.fr",
+   "telephone": "+33146225688",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6 Passage Doisy",
+    "postalCode": "75017",
+    "addressLocality": "Paris",
+    "addressCountry": "FR"
+   },
+   "sameAs": [
+    "https://vimeo.com/pourfairesimple",
+    "https://www.youtube.com/user/pourfairesimple",
+    "https://www.instagram.com/agencepourfairesimple/",
+    "https://fr.linkedin.com/company/pour-faire-simple"
+   ],
+   "contactPoint": [
+    {
+     "@type": "ContactPoint",
+     "contactType": "sales",
+     "telephone": "+33146225688",
+     "email": "bonjour@pourfairesimple.fr",
+     "availableLanguage": [
+      "fr",
+      "en"
+     ],
+     "areaServed": "FR"
+    }
+   ],
+   "knowsAbout": [
+    "brand content",
+    "publicité TV",
+    "motion design 2D et 3D",
+    "social ads",
+    "films corporate et institutionnels",
+    "portraits RH",
+    "captation d'événements",
+    "contenus d'onboarding et de culture d'entreprise",
+    "case studies",
+    "témoignages",
+    "interviews",
+    "UGC",
+    "snack content",
+    "podcast audio et vidéo"
+   ]
+  },
+  {
+   "@type": "LocalBusiness",
+   "@id": "https://www.pourfairesimple.fr/#localbusiness",
+   "parentOrganization": {
+    "@id": "https://www.pourfairesimple.fr/#organization"
+   },
+   "name": "Pour Faire Simple.",
+   "image": "https://www.pourfairesimple.fr/assets/img/og/index.png",
+   "url": "https://www.pourfairesimple.fr/",
+   "telephone": "+33146225688",
+   "email": "bonjour@pourfairesimple.fr",
+   "priceRange": "€€",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6 Passage Doisy",
+    "postalCode": "75017",
+    "addressLocality": "Paris",
+    "addressCountry": "FR"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8797,
+    "longitude": 2.2941
+   },
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+     ],
+     "opens": "09:30",
+     "closes": "18:30"
+    }
+   ],
+   "sameAs": [
+    "https://vimeo.com/pourfairesimple",
+    "https://www.youtube.com/user/pourfairesimple",
+    "https://www.instagram.com/agencepourfairesimple/",
+    "https://fr.linkedin.com/company/pour-faire-simple"
+   ],
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "Paris"
+    },
+    {
+     "@type": "Country",
+     "name": "France"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://www.pourfairesimple.fr/#website",
+   "url": "https://www.pourfairesimple.fr/",
+   "name": "Pour Faire Simple.",
+   "publisher": {
+    "@id": "https://www.pourfairesimple.fr/#organization"
+   },
+   "inLanguage": "fr-FR"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Accueil",
+     "item": "https://www.pourfairesimple.fr/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Réalisations",
+     "item": "https://www.pourfairesimple.fr/realisations.html"
+    }
+   ],
+   "@id": "https://www.pourfairesimple.fr/realisations.html#breadcrumb"
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://www.pourfairesimple.fr/realisations.html#webpage",
+   "url": "https://www.pourfairesimple.fr/realisations.html",
+   "name": "Réalisations vidéo : films corporate, motion design, social",
+   "description": "Nos réalisations vidéo à Paris, filtrables par format et par secteur : films corporate, motion design 2D et 3D, social ads, portraits RH, captation, podcast.",
+   "isPartOf": {
+    "@id": "https://www.pourfairesimple.fr/#website"
+   },
+   "about": {
+    "@id": "https://www.pourfairesimple.fr/#organization"
+   },
+   "inLanguage": "fr-FR",
+   "dateModified": "2026-09-14",
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://www.pourfairesimple.fr/assets/img/og/realisations.png",
+    "width": 1200,
+    "height": 630
+   },
+   "breadcrumb": {
+    "@id": "https://www.pourfairesimple.fr/realisations.html#breadcrumb"
+   }
+  },
+  {
+   "@type": "ItemList",
+   "@id": "https://www.pourfairesimple.fr/realisations.html#list",
+   "name": "Réalisations vidéo de Pour Faire Simple.",
+   "numberOfItems": 12,
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@type": "VideoObject",
+      "name": "Bienvenue à bord : la série d'onboarding",
+      "description": "Six épisodes pour accueillir les nouveaux collaborateurs, tournés sur trois sites.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/sncf-serie-onboarding.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/sncf-serie-onboarding.svg"
+      ],
+      "uploadDate": "2025-06-01",
+      "duration": "PT3M40S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations/sncf-serie-onboarding.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Film corporate & institutionnel"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@type": "VideoObject",
+      "name": "Investir, expliqué en 15 secondes",
+      "description": "Une série de social ads en motion design, déclinée en 9:16, 1:1 et 16:9.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/trade-republic-social-ads-motion-16x9.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/trade-republic-social-ads-motion.svg"
+      ],
+      "uploadDate": "2025-06-01",
+      "duration": "PT0M15S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations/trade-republic-social-ads-motion.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Social ads & snack content"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "item": {
+      "@type": "VideoObject",
+      "name": "Le rituel du matin",
+      "description": "Film de marque 45 secondes et déclinaisons 20 et 6 secondes pour la TV et le digital.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/segafredo-brand-content.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/segafredo-brand-content.svg"
+      ],
+      "uploadDate": "2024-06-01",
+      "duration": "PT0M45S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations/segafredo-brand-content.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Brand content & publicité"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "item": {
+      "@type": "VideoObject",
+      "name": "Estimer son bien, sans jargon",
+      "description": "Vidéo explicative en motion design 2D, voix off et sous-titres.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/seloger-motion-explicatif.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/seloger-motion-explicatif.svg"
+      ],
+      "uploadDate": "2024-06-01",
+      "duration": "PT1M30S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Motion design 2D / 3D"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "item": {
+      "@type": "VideoObject",
+      "name": "L'industrie 4.0, vue de l'atelier",
+      "description": "Film institutionnel tourné sur un site de production, version FR et EN.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/lectra-film-institutionnel.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/lectra-film-institutionnel.svg"
+      ],
+      "uploadDate": "2024-06-01",
+      "duration": "PT2M20S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Film corporate & institutionnel"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "item": {
+      "@type": "VideoObject",
+      "name": "Témoignage client : la supply chain en direct",
+      "description": "Case study vidéo avec interview croisée éditeur et client.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/generix-case-study-client-16x9.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/generix-case-study-client.svg"
+      ],
+      "uploadDate": "2023-06-01",
+      "duration": "PT2M05S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Portraits, témoignages & interviews"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 7,
+     "item": {
+      "@type": "VideoObject",
+      "name": "Du végétal à l'ingrédient",
+      "description": "Film corporate en prises de vues réelles avec inserts motion.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/nexira-film-corporate.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/nexira-film-corporate.svg"
+      ],
+      "uploadDate": "2023-06-01",
+      "duration": "PT3M10S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Film corporate & institutionnel"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 8,
+     "item": {
+      "@type": "VideoObject",
+      "name": "Pour Faire Court. : la saison en 6 secondes",
+      "description": "Abonnement snack content : 8 vidéos par mois pour Instagram et TikTok.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/ticketac-snack-content-16x9.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/ticketac-snack-content.svg"
+      ],
+      "uploadDate": "2025-06-01",
+      "duration": "PT0M06S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Social ads & snack content"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 9,
+     "item": {
+      "@type": "VideoObject",
+      "name": "Le produit, vu de l'intérieur",
+      "description": "Animation 3D de mécanisme produit pour les équipes commerciales.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/pharmalys-motion-3d.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/pharmalys-motion-3d.svg"
+      ],
+      "uploadDate": "2024-06-01",
+      "duration": "PT1M10S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Motion design 2D / 3D"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 10,
+     "item": {
+      "@type": "VideoObject",
+      "name": "Portraits de gestionnaires",
+      "description": "Série de portraits RH pour la marque employeur, format 1:1.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/loiselet-daigremont-portraits-rh-16x9.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/loiselet-daigremont-portraits-rh.svg"
+      ],
+      "uploadDate": "2023-06-01",
+      "duration": "PT1M00S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Portraits, témoignages & interviews"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 11,
+     "item": {
+      "@type": "VideoObject",
+      "name": "Le podcast des flux",
+      "description": "Podcast vidéo enregistré en studio, 6 épisodes, capsules de 60 secondes.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/s2pweb-captation-podcast.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/s2pweb-captation-podcast.svg"
+      ],
+      "uploadDate": "2025-06-01",
+      "duration": "PT24M00S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Captation & podcast"
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 12,
+     "item": {
+      "@type": "VideoObject",
+      "name": "Rendre aux façades leur lumière",
+      "description": "Film institutionnel, tournage drone et macro sur chantier.",
+      "thumbnailUrl": [
+       "https://www.pourfairesimple.fr/assets/img/posters/thomann-hanry-film-patrimoine.svg",
+       "https://www.pourfairesimple.fr/assets/img/posters/thomann-hanry-film-patrimoine.svg"
+      ],
+      "uploadDate": "2024-06-01",
+      "duration": "PT2M45S",
+      "contentUrl": "https://www.pourfairesimple.fr/assets/video/showreel-placeholder.webm",
+      "url": "https://www.pourfairesimple.fr/realisations.html",
+      "publisher": {
+       "@id": "https://www.pourfairesimple.fr/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "genre": "Film corporate & institutionnel"
+     }
+    }
+   ]
+  }
+ ]
+}
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="index.html" aria-label="Pour Faire Simple, retour à l'accueil">Pour Faire Simple<span class="logo__dot" aria-hidden="true"></span></a>
+    <nav class="nav" aria-label="Navigation principale"><ul class="nav__list"><li><a class="nav__link" href="agence-video.html">Agence vidéo</a></li><li><a class="nav__link" href="boite-de-prod.html">Boîte de prod</a></li><li><a class="nav__link" href="realisations.html" aria-current="page">Réalisations</a></li><li><a class="nav__link" href="methode.html">Méthode</a></li><li><a class="nav__link" href="ressources.html">Ressources</a></li><li><a class="nav__link" href="faq.html">FAQ</a></li></ul></nav>
+    <div class="cluster">
+      <a class="btn btn--primary header-cta" href="contact.html">Parlons de votre projet</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="menu" id="menu" aria-label="Menu mobile">
+  <nav aria-label="Navigation mobile"><ul class="menu__list">
+    <li><a href="index.html">Accueil</a></li><li><a href="agence-video.html">Agence vidéo</a></li><li><a href="boite-de-prod.html">Boîte de prod</a></li><li><a href="realisations.html" aria-current="page">Réalisations</a></li><li><a href="methode.html">Méthode</a></li><li><a href="ressources.html">Ressources</a></li><li><a href="faq.html">FAQ</a></li>
+    <li><a href="offre-pour-faire-court.html">Pour Faire Court. 🌭</a></li>
+    <li><a href="offre-raconte.html">Raconte... 🦫</a></li>
+  </ul></nav>
+  <div class="menu__foot">
+    <a class="btn btn--primary" href="contact.html">Parlons de votre projet</a>
+    <a href="tel:+33146225688">+33 (0)1 46 22 56 88</a>
+    <a href="mailto:bonjour@pourfairesimple.fr">bonjour@pourfairesimple.fr</a>
+  </div>
+</div>
+<main id="contenu" tabindex="-1">
+<div class="sample-banner"><strong>Exemple de mise en page</strong> · réalisations plausibles inspirées des références affichées, contenu à remplacer par les vrais projets</div>
+<section class="hero hero--page" aria-labelledby="page-title">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Accueil</a></li><li><span aria-current="page">Réalisations</span></li></ol></nav>
+    <p class="eyebrow">Réalisations</p>
+    <h1 class="display" id="page-title">Des films qui font <span class="voice">leur travail</span><span class="dot">.</span></h1>
+    <div class="answer-box">
+      <p>Pour Faire Simple. produit depuis 2013 des films corporate et institutionnels, du motion design 2D et 3D, des social ads, des portraits RH, des captations et des podcasts pour des entreprises comme SNCF, Trade Republic, Segafredo, SeLoger, Lectra ou Generix. Chaque réalisation ci-dessous indique le format, le secteur, la durée et renvoie vers l'offre correspondante.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--line" aria-labelledby="grille-title">
+  <div class="container">
+    <h2 class="visually-hidden" id="grille-title">Grille des réalisations</h2>
+    <div class="filters reveal" role="group" aria-label="Filtrer les réalisations">
+      <div class="filters__group">
+        <span class="filters__label">Format</span>
+        <button class="chip" type="button" data-filter="format" data-value="all" aria-pressed="true">Tous</button>
+        <button class="chip" type="button" data-filter="format" data-value="film-corporate" aria-pressed="false">Film corporate & institutionnel</button><button class="chip" type="button" data-filter="format" data-value="motion-design" aria-pressed="false">Motion design 2D / 3D</button><button class="chip" type="button" data-filter="format" data-value="social-ads" aria-pressed="false">Social ads & snack content</button><button class="chip" type="button" data-filter="format" data-value="portraits" aria-pressed="false">Portraits, témoignages & interviews</button><button class="chip" type="button" data-filter="format" data-value="captation" aria-pressed="false">Captation & podcast</button><button class="chip" type="button" data-filter="format" data-value="brand-content" aria-pressed="false">Brand content & publicité</button>
+      </div>
+      <div class="filters__group">
+        <span class="filters__label">Secteur</span>
+        <button class="chip" type="button" data-filter="secteur" data-value="all" aria-pressed="true">Tous</button>
+        <button class="chip" type="button" data-filter="secteur" data-value="transport" aria-pressed="false">Transport & mobilité</button><button class="chip" type="button" data-filter="secteur" data-value="finance" aria-pressed="false">Finance & assurance</button><button class="chip" type="button" data-filter="secteur" data-value="food" aria-pressed="false">Food & boissons</button><button class="chip" type="button" data-filter="secteur" data-value="immobilier" aria-pressed="false">Immobilier</button><button class="chip" type="button" data-filter="secteur" data-value="industrie" aria-pressed="false">Industrie & tech</button><button class="chip" type="button" data-filter="secteur" data-value="sante" aria-pressed="false">Santé</button><button class="chip" type="button" data-filter="secteur" data-value="culture" aria-pressed="false">Culture & loisirs</button><button class="chip" type="button" data-filter="secteur" data-value="batiment" aria-pressed="false">Bâtiment & patrimoine</button>
+      </div>
+      <p class="filters__count" aria-live="polite">12 réalisations</p>
+    </div>
+    <div class="work-grid reveal--stagger">
+      <a class="work-card work-card--wide " data-format="film-corporate" data-secteur="transport" href="realisations/sncf-serie-onboarding.html" data-cursor="Voir l'étude de cas"><div class="work-card__media"><img src="assets/img/posters/sncf-serie-onboarding.svg" alt="Image de la vidéo « Bienvenue à bord : la série d&#x27;onboarding » réalisée pour SNCF, film corporate &amp; institutionnel" width="1600" height="900" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">Bienvenue à bord : la série d&#x27;onboarding</span><span class="work-card__sub">SNCF · Film corporate & institutionnel · Transport & mobilité</span></div></a><a class="work-card work-card--tall " data-format="social-ads" data-secteur="finance" href="realisations/trade-republic-social-ads-motion.html" data-cursor="Voir l'étude de cas"><div class="work-card__media"><img src="assets/img/posters/trade-republic-social-ads-motion.svg" alt="Image de la vidéo « Investir, expliqué en 15 secondes » réalisée pour Trade Republic, social ads &amp; snack content" width="900" height="1600" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">Investir, expliqué en 15 secondes</span><span class="work-card__sub">Trade Republic · Social ads & snack content · Finance & assurance</span></div></a><a class="work-card work-card--wide " data-format="brand-content" data-secteur="food" href="realisations/segafredo-brand-content.html" data-cursor="Voir l'étude de cas"><div class="work-card__media"><img src="assets/img/posters/segafredo-brand-content.svg" alt="Image de la vidéo « Le rituel du matin » réalisée pour Segafredo, brand content &amp; publicité" width="1600" height="900" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">Le rituel du matin</span><span class="work-card__sub">Segafredo · Brand content & publicité · Food & boissons</span></div></a><button type="button" class="work-card  " data-format="motion-design" data-secteur="immobilier" data-cursor="Aperçu" data-title="Estimer son bien, sans jargon" data-sub="SeLoger · Motion design 2D / 3D · Vidéo explicative en motion design 2D, voix off et sous-titres." data-poster="assets/img/posters/seloger-motion-explicatif.svg"><div class="work-card__media"><img src="assets/img/posters/seloger-motion-explicatif.svg" alt="Image de la vidéo « Estimer son bien, sans jargon » réalisée pour SeLoger, motion design 2d / 3d" width="1600" height="900" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">Estimer son bien, sans jargon</span><span class="work-card__sub">SeLoger · Motion design 2D / 3D · Immobilier</span></div></button><button type="button" class="work-card  " data-format="film-corporate" data-secteur="industrie" data-cursor="Aperçu" data-title="L&#x27;industrie 4.0, vue de l&#x27;atelier" data-sub="Lectra · Film corporate & institutionnel · Film institutionnel tourné sur un site de production, version FR et EN." data-poster="assets/img/posters/lectra-film-institutionnel.svg"><div class="work-card__media"><img src="assets/img/posters/lectra-film-institutionnel.svg" alt="Image de la vidéo « L&#x27;industrie 4.0, vue de l&#x27;atelier » réalisée pour Lectra, film corporate &amp; institutionnel" width="1600" height="900" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">L&#x27;industrie 4.0, vue de l&#x27;atelier</span><span class="work-card__sub">Lectra · Film corporate & institutionnel · Industrie & tech</span></div></button><button type="button" class="work-card work-card--square " data-format="portraits" data-secteur="industrie" data-cursor="Aperçu" data-title="Témoignage client : la supply chain en direct" data-sub="Generix · Portraits, témoignages & interviews · Case study vidéo avec interview croisée éditeur et client." data-poster="assets/img/posters/generix-case-study-client-16x9.svg"><div class="work-card__media"><img src="assets/img/posters/generix-case-study-client.svg" alt="Image de la vidéo « Témoignage client : la supply chain en direct » réalisée pour Generix, portraits, témoignages &amp; interviews" width="1200" height="1200" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">Témoignage client : la supply chain en direct</span><span class="work-card__sub">Generix · Portraits, témoignages & interviews · Industrie & tech</span></div></button><button type="button" class="work-card  " data-format="film-corporate" data-secteur="industrie" data-cursor="Aperçu" data-title="Du végétal à l&#x27;ingrédient" data-sub="Nexira · Film corporate & institutionnel · Film corporate en prises de vues réelles avec inserts motion." data-poster="assets/img/posters/nexira-film-corporate.svg"><div class="work-card__media"><img src="assets/img/posters/nexira-film-corporate.svg" alt="Image de la vidéo « Du végétal à l&#x27;ingrédient » réalisée pour Nexira, film corporate &amp; institutionnel" width="1600" height="900" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">Du végétal à l&#x27;ingrédient</span><span class="work-card__sub">Nexira · Film corporate & institutionnel · Industrie & tech</span></div></button><button type="button" class="work-card work-card--tall " data-format="social-ads" data-secteur="culture" data-cursor="Aperçu" data-title="Pour Faire Court. : la saison en 6 secondes" data-sub="Ticketac · Social ads & snack content · Abonnement snack content : 8 vidéos par mois pour Instagram et TikTok." data-poster="assets/img/posters/ticketac-snack-content-16x9.svg"><div class="work-card__media"><img src="assets/img/posters/ticketac-snack-content.svg" alt="Image de la vidéo « Pour Faire Court. : la saison en 6 secondes » réalisée pour Ticketac, social ads &amp; snack content" width="900" height="1600" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">Pour Faire Court. : la saison en 6 secondes</span><span class="work-card__sub">Ticketac · Social ads & snack content · Culture & loisirs</span></div></button><button type="button" class="work-card  " data-format="motion-design" data-secteur="sante" data-cursor="Aperçu" data-title="Le produit, vu de l&#x27;intérieur" data-sub="Pharmalys · Motion design 2D / 3D · Animation 3D de mécanisme produit pour les équipes commerciales." data-poster="assets/img/posters/pharmalys-motion-3d.svg"><div class="work-card__media"><img src="assets/img/posters/pharmalys-motion-3d.svg" alt="Image de la vidéo « Le produit, vu de l&#x27;intérieur » réalisée pour Pharmalys, motion design 2d / 3d" width="1600" height="900" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">Le produit, vu de l&#x27;intérieur</span><span class="work-card__sub">Pharmalys · Motion design 2D / 3D · Santé</span></div></button><button type="button" class="work-card work-card--square " data-format="portraits" data-secteur="immobilier" data-cursor="Aperçu" data-title="Portraits de gestionnaires" data-sub="Loiselet &amp; Daigremont · Portraits, témoignages & interviews · Série de portraits RH pour la marque employeur, format 1:1." data-poster="assets/img/posters/loiselet-daigremont-portraits-rh-16x9.svg"><div class="work-card__media"><img src="assets/img/posters/loiselet-daigremont-portraits-rh.svg" alt="Image de la vidéo « Portraits de gestionnaires » réalisée pour Loiselet &amp; Daigremont, portraits, témoignages &amp; interviews" width="1200" height="1200" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">Portraits de gestionnaires</span><span class="work-card__sub">Loiselet &amp; Daigremont · Portraits, témoignages & interviews · Immobilier</span></div></button><button type="button" class="work-card  " data-format="captation" data-secteur="industrie" data-cursor="Aperçu" data-title="Le podcast des flux" data-sub="S2PWeb · Captation & podcast · Podcast vidéo enregistré en studio, 6 épisodes, capsules de 60 secondes." data-poster="assets/img/posters/s2pweb-captation-podcast.svg"><div class="work-card__media"><img src="assets/img/posters/s2pweb-captation-podcast.svg" alt="Image de la vidéo « Le podcast des flux » réalisée pour S2PWeb, captation &amp; podcast" width="1600" height="900" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">Le podcast des flux</span><span class="work-card__sub">S2PWeb · Captation & podcast · Industrie & tech</span></div></button><button type="button" class="work-card  " data-format="film-corporate" data-secteur="batiment" data-cursor="Aperçu" data-title="Rendre aux façades leur lumière" data-sub="Thomann-Hanry · Film corporate & institutionnel · Film institutionnel, tournage drone et macro sur chantier." data-poster="assets/img/posters/thomann-hanry-film-patrimoine.svg"><div class="work-card__media"><img src="assets/img/posters/thomann-hanry-film-patrimoine.svg" alt="Image de la vidéo « Rendre aux façades leur lumière » réalisée pour Thomann-Hanry, film corporate &amp; institutionnel" width="1600" height="900" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
+      <div class="work-card__meta"><span class="work-card__title">Rendre aux façades leur lumière</span><span class="work-card__sub">Thomann-Hanry · Film corporate & institutionnel · Bâtiment & patrimoine</span></div></button>
+    </div>
+    <p class="work-empty" aria-live="polite">Aucune réalisation ne correspond à ces deux filtres. Élargissez le format ou le secteur, ou <a href="contact.html">décrivez-nous votre projet</a>.</p>
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal__box">
+        <button class="modal__close" type="button" aria-label="Fermer l'aperçu">×</button>
+        <img id="modal-img" src="assets/img/posters/showreel.svg" alt="" width="1600" height="900" loading="lazy">
+        <h3 id="modal-title" class="h-lg"></h3>
+        <p id="modal-sub" class="muted mt-0"></p>
+        <p class="small mt-0"><span class="tovalidate">Fiche à venir</span> Cette réalisation aura sa page dédiée avec vidéo, enjeu, dispositif et livrables, comme les trois études de cas déjà rédigées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="etudes-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="h-xl" id="etudes-title">Trois études de cas détaillées<span class="dot">.</span></h2>
+      <p class="lead">Enjeu, dispositif, livrables, diffusion : la même structure pour chaque étude de cas, pour comparer ce qui est comparable.</p>
+    </div>
+    <div class="grid grid--3 reveal--stagger">
+      <a class="card" href="realisations/sncf-serie-onboarding.html"><span class="card__num">Film corporate · Transport</span><h3>SNCF — la série d'onboarding</h3><p>Six épisodes tournés sur trois sites pour accueillir les nouveaux collaborateurs.</p><span class="card__foot link-arrow">Lire l'étude de cas</span></a>
+      <a class="card" href="realisations/trade-republic-social-ads-motion.html"><span class="card__num">Social ads · Finance</span><h3>Trade Republic — investir en 15 secondes</h3><p>Une série de social ads en motion design déclinée en trois formats.</p><span class="card__foot link-arrow">Lire l'étude de cas</span></a>
+      <a class="card" href="realisations/segafredo-brand-content.html"><span class="card__num">Brand content · Food</span><h3>Segafredo — le rituel du matin</h3><p>Film de marque 45 s et déclinaisons 20 s et 6 s pour la TV et le digital.</p><span class="card__foot link-arrow">Lire l'étude de cas</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="formats-real-title">
+  <div class="container split">
+    <div class="reveal">
+      <h2 class="h-xl" id="formats-real-title">Quel format pour quel objectif<span class="dot">&nbsp;?</span></h2>
+      <p class="lead mt-6">Chaque format de cette grille répond à un objectif de communication précis. Le tableau résume la correspondance ; le guide des formats la détaille.</p>
+      <p><a class="link-arrow" href="ressources/quel-format-video-choisir-selon-votre-objectif.html">Lire le guide des formats</a></p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="table">
+        <caption>Correspondance entre format vidéo et objectif de communication.</caption>
+        <thead><tr><th scope="col">Objectif</th><th scope="col">Format recommandé</th><th scope="col">Offre ou parcours</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Présenter l'entreprise</th><td>Film corporate 2 à 3 min ou capsule incarnée</td><td><a href="offre-raconte.html">Raconte...</a></td></tr>
+          <tr><th scope="row">Expliquer une offre complexe</th><td>Motion design 2D 60 à 90 s</td><td><a href="agence-video.html">Agence vidéo</a></td></tr>
+          <tr><th scope="row">Animer les réseaux sociaux</th><td>Snack content 3 à 15 s par lots</td><td><a href="offre-pour-faire-court.html">Pour Faire Court.</a></td></tr>
+          <tr><th scope="row">Recruter</th><td>Portraits RH, film de culture, onboarding</td><td><a href="realisations/sncf-serie-onboarding.html">Étude de cas SNCF</a></td></tr>
+          <tr><th scope="row">Prouver par un client</th><td>Case study et témoignage 2 min</td><td><a href="agence-video.html">Agence vidéo</a></td></tr>
+          <tr><th scope="row">Produire pour vos clients</th><td>Tous formats, en marque blanche</td><td><a href="boite-de-prod.html">Boîte de prod</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+<section class="end-card" aria-labelledby="end-title">
+  <div class="container">
+    <h2 class="end-card__title reveal" id="end-title">Parlons de votre projet<span class="dot">.</span><br><span class="voice">Un appel de 20 minutes suffit souvent à cadrer l'essentiel.</span></h2>
+    <div class="end-card__row reveal">
+      <div class="end-card__contacts">
+        <a href="tel:+33146225688">+33 (0)1 46 22 56 88</a>
+        <a href="mailto:bonjour@pourfairesimple.fr">bonjour@pourfairesimple.fr</a>
+        <span>6 Passage Doisy, 75017 Paris</span>
+      </div>
+      <a class="btn btn--primary btn--lg" href="contact.html">Parlons de votre projet <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <a class="logo" href="index.html">Pour Faire Simple<span class="logo__dot" aria-hidden="true"></span></a>
+        <p class="mt-6">Agence vidéo et société de production audiovisuelle à Paris, depuis 2013. Le bon message, aux bonnes personnes, de la bonne manière.</p>
+        <address>6 Passage Doisy<br>75017 Paris<br><a href="tel:+33146225688">+33 (0)1 46 22 56 88</a><br><a href="mailto:bonjour@pourfairesimple.fr">bonjour@pourfairesimple.fr</a></address>
+      </div>
+      <div>
+        <h2>Pour qui</h2>
+        <ul>
+          <li><a href="agence-video.html">Agence vidéo pour les PME</a></li>
+          <li><a href="boite-de-prod.html">Boîte de prod pour les agences</a></li>
+          <li><a href="offre-pour-faire-court.html">Offre Pour Faire Court.</a></li>
+          <li><a href="offre-raconte.html">Offre Raconte...</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Découvrir</h2>
+        <ul>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="methode.html">Notre méthode de production</a></li>
+          <li><a href="ressources.html">Ressources et glossaire</a></li>
+          <li><a href="faq.html">Questions fréquentes</a></li>
+          <li><a href="contact.html">Contact et devis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Suivre</h2>
+        <ul>
+          <li><a href="https://vimeo.com/pourfairesimple" rel="noopener" target="_blank">Vimeo</a></li>
+          <li><a href="https://www.youtube.com/user/pourfairesimple" rel="noopener" target="_blank">YouTube</a></li>
+          <li><a href="https://www.instagram.com/agencepourfairesimple/" rel="noopener" target="_blank">Instagram @agencepourfairesimple</a></li>
+          <li><a href="https://fr.linkedin.com/company/pour-faire-simple" rel="noopener" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© 2026 Pour Faire Simple. Tous droits réservés.</span>
+      <ul><li><a href="mentions-legales.html">Mentions légales et CGV</a></li><li><a href="sitemap.xml">Plan du site (XML)</a></li><li><a href="llms.txt">llms.txt</a></li></ul>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

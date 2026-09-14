@@ -1,0 +1,48 @@
+<!--META
+{
+ "path": "faq.html",
+ "nav": "faq.html",
+ "og": "faq",
+ "title": "FAQ agence vidéo : prix, délais, droits, formats, tournage",
+ "og_title": "FAQ — 18 questions sur les prix, délais, droits et formats d'une production vidéo",
+ "description": "18 réponses aux questions posées à une agence vidéo : combien coûte une vidéo d'entreprise, combien de temps, qui détient les droits, motion design ou tournage.",
+ "kicker": "FAQ · 18 questions, réponses de 40 à 80 mots",
+ "priority": "0.8",
+ "breadcrumb": [["Questions fréquentes", ""]],
+ "seo_note": "Requête cible : questions longues en langage naturel (« combien coûte une vidéo d'entreprise », « combien de temps pour produire une vidéo », « qui détient les droits d'une vidéo »).\n  JSON-LD FAQPage avec les 18 paires question / réponse, texte identique à l'affichage. Réponses autoportantes de 40 à 80 mots, citables hors contexte par un moteur génératif.\n  Maillage : chaque réponse renvoie vers la page qui détaille (prix, méthode, offres, mentions légales). Accordéon natif details/summary, accessible au clavier.",
+ "jsonld_py": "[{'@type': 'FAQPage', '@id': url + '#faq', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in FAQ_ITEMS]}]"
+}
+-->
+<section class="hero hero--page" aria-labelledby="page-title">
+  <div class="container">
+    {{breadcrumb}}
+    <p class="eyebrow">Questions fréquentes</p>
+    <h1 class="display" id="page-title">Les questions qu'on nous pose <span class="voice">avant de signer</span><span class="dot">.</span></h1>
+    <div class="answer-box">
+      <p>Voici les 18 questions que les dirigeants, responsables communication et agences nous posent le plus souvent avant de confier une production vidéo à Pour Faire Simple., avec des réponses courtes et chiffrées : prix, délais, droits, formats, tournage, marque blanche. Si la vôtre n'y est pas, un appel de 20 minutes y répondra.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--line" aria-labelledby="faq-list-title">
+  <div class="container">
+    <h2 class="visually-hidden" id="faq-list-title">Questions et réponses</h2>
+    <ul class="faq reveal">
+      {{py: "".join(f'<li><details{" open" if i == 0 else ""}><summary>{esc(q)}</summary><div class="faq__body"><p>{a_html}</p></div></details></li>' for i, (q, a, a_html) in enumerate(FAQ_HTML))}}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="faq-more-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="h-xl" id="faq-more-title">Pour aller plus loin<span class="dot">.</span></h2>
+      <p class="lead">Deux guides complets et un glossaire pour préparer votre projet, ou un formulaire pour nous le décrire directement.</p>
+    </div>
+    <div class="grid grid--3 reveal--stagger">
+      <a class="card" href="{{root}}ressources/combien-coute-une-video-corporate-2026.html"><span class="card__num">Guide</span><h3>Combien coûte une vidéo corporate en 2026 ?</h3><p>Fourchettes, postes de dépense, lecture d'un devis.</p><span class="card__foot link-arrow">Lire</span></a>
+      <a class="card" href="{{root}}ressources/quel-format-video-choisir-selon-votre-objectif.html"><span class="card__num">Guide</span><h3>Quel format vidéo choisir selon votre objectif ?</h3><p>Notoriété, recrutement, vente, formation.</p><span class="card__foot link-arrow">Lire</span></a>
+      <a class="card card--accent" href="{{root}}contact.html"><span class="card__num">Contact</span><h3>Décrivez votre projet</h3><p>Cinq questions, une réponse sous 48 h avec une première estimation.</p><span class="card__foot link-arrow">Parlons de votre projet</span></a>
+    </div>
+  </div>
+</section>

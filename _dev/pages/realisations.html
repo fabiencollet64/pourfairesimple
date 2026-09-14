@@ -1,0 +1,96 @@
+<!--META
+{
+ "path": "realisations.html",
+ "nav": "realisations.html",
+ "og": "realisations",
+ "title": "Réalisations vidéo : films corporate, motion design, social",
+ "og_title": "Réalisations — films corporate, motion design, social ads et podcasts par Pour Faire Simple.",
+ "description": "Nos réalisations vidéo à Paris, filtrables par format et par secteur : films corporate, motion design 2D et 3D, social ads, portraits RH, captation, podcast.",
+ "kicker": "Réalisations · filtrables par format et secteur",
+ "priority": "0.9", "changefreq": "weekly",
+ "breadcrumb": [["Réalisations", ""]],
+ "seo_note": "Requête cible : « réalisations agence vidéo », « exemples film corporate », « portfolio motion design ». Corrige la faiblesse n°1 du site actuel : un portfolio on-site indexable au lieu d'un lien Vimeo.\n  JSON-LD ItemList de 12 VideoObject (thumbnail, durée, date, genre) + BreadcrumbList. Filtres JS par format et secteur, état vide géré, pré-filtrage via ?format= et ?secteur= depuis les pages de service.\n  Chaque réalisation renvoie vers l'offre ou le parcours correspondant ; 3 études de cas détaillées, 9 fiches à venir en modale (aucun lien mort).",
+ "jsonld_py": "[{'@type': 'ItemList', '@id': url + '#list', 'name': 'Réalisations vidéo de Pour Faire Simple.', 'numberOfItems': len(PROJECTS), 'itemListElement': [{'@type': 'ListItem', 'position': i+1, 'item': video_ld(p)} for i, p in enumerate(sorted(PROJECTS, key=lambda q: q['order']))]}]"
+}
+-->
+<div class="sample-banner"><strong>Exemple de mise en page</strong> · réalisations plausibles inspirées des références affichées, contenu à remplacer par les vrais projets</div>
+<section class="hero hero--page" aria-labelledby="page-title">
+  <div class="container">
+    {{breadcrumb}}
+    <p class="eyebrow">Réalisations</p>
+    <h1 class="display" id="page-title">Des films qui font <span class="voice">leur travail</span><span class="dot">.</span></h1>
+    <div class="answer-box">
+      <p>Pour Faire Simple. produit depuis 2013 des films corporate et institutionnels, du motion design 2D et 3D, des social ads, des portraits RH, des captations et des podcasts pour des entreprises comme SNCF, Trade Republic, Segafredo, SeLoger, Lectra ou Generix. Chaque réalisation ci-dessous indique le format, le secteur, la durée et renvoie vers l'offre correspondante.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--line" aria-labelledby="grille-title">
+  <div class="container">
+    <h2 class="visually-hidden" id="grille-title">Grille des réalisations</h2>
+    <div class="filters reveal" role="group" aria-label="Filtrer les réalisations">
+      <div class="filters__group">
+        <span class="filters__label">Format</span>
+        <button class="chip" type="button" data-filter="format" data-value="all" aria-pressed="true">Tous</button>
+        {{py: "".join(f'<button class="chip" type="button" data-filter="format" data-value="{k}" aria-pressed="false">{v}</button>' for k, v in FORMATS.items())}}
+      </div>
+      <div class="filters__group">
+        <span class="filters__label">Secteur</span>
+        <button class="chip" type="button" data-filter="secteur" data-value="all" aria-pressed="true">Tous</button>
+        {{py: "".join(f'<button class="chip" type="button" data-filter="secteur" data-value="{k}" aria-pressed="false">{v}</button>' for k, v in SECTEURS.items())}}
+      </div>
+      <p class="filters__count" aria-live="polite">12 réalisations</p>
+    </div>
+    <div class="work-grid reveal--stagger">
+      {{py: "".join(project_card(p, root) for p in sorted(PROJECTS, key=lambda q: q["order"]))}}
+    </div>
+    <p class="work-empty" aria-live="polite">Aucune réalisation ne correspond à ces deux filtres. Élargissez le format ou le secteur, ou <a href="{{root}}contact.html">décrivez-nous votre projet</a>.</p>
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal__box">
+        <button class="modal__close" type="button" aria-label="Fermer l'aperçu">×</button>
+        <img id="modal-img" src="{{root}}assets/img/posters/showreel.svg" alt="" width="1600" height="900" loading="lazy">
+        <h3 id="modal-title" class="h-lg"></h3>
+        <p id="modal-sub" class="muted mt-0"></p>
+        <p class="small mt-0"><span class="tovalidate">Fiche à venir</span> Cette réalisation aura sa page dédiée avec vidéo, enjeu, dispositif et livrables, comme les trois études de cas déjà rédigées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="etudes-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="h-xl" id="etudes-title">Trois études de cas détaillées<span class="dot">.</span></h2>
+      <p class="lead">Enjeu, dispositif, livrables, diffusion : la même structure pour chaque étude de cas, pour comparer ce qui est comparable.</p>
+    </div>
+    <div class="grid grid--3 reveal--stagger">
+      <a class="card" href="{{root}}realisations/sncf-serie-onboarding.html"><span class="card__num">Film corporate · Transport</span><h3>SNCF — la série d'onboarding</h3><p>Six épisodes tournés sur trois sites pour accueillir les nouveaux collaborateurs.</p><span class="card__foot link-arrow">Lire l'étude de cas</span></a>
+      <a class="card" href="{{root}}realisations/trade-republic-social-ads-motion.html"><span class="card__num">Social ads · Finance</span><h3>Trade Republic — investir en 15 secondes</h3><p>Une série de social ads en motion design déclinée en trois formats.</p><span class="card__foot link-arrow">Lire l'étude de cas</span></a>
+      <a class="card" href="{{root}}realisations/segafredo-brand-content.html"><span class="card__num">Brand content · Food</span><h3>Segafredo — le rituel du matin</h3><p>Film de marque 45 s et déclinaisons 20 s et 6 s pour la TV et le digital.</p><span class="card__foot link-arrow">Lire l'étude de cas</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="formats-real-title">
+  <div class="container split">
+    <div class="reveal">
+      <h2 class="h-xl" id="formats-real-title">Quel format pour quel objectif<span class="dot">&nbsp;?</span></h2>
+      <p class="lead mt-6">Chaque format de cette grille répond à un objectif de communication précis. Le tableau résume la correspondance ; le guide des formats la détaille.</p>
+      <p><a class="link-arrow" href="{{root}}ressources/quel-format-video-choisir-selon-votre-objectif.html">Lire le guide des formats</a></p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="table">
+        <caption>Correspondance entre format vidéo et objectif de communication.</caption>
+        <thead><tr><th scope="col">Objectif</th><th scope="col">Format recommandé</th><th scope="col">Offre ou parcours</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Présenter l'entreprise</th><td>Film corporate 2 à 3 min ou capsule incarnée</td><td><a href="{{root}}offre-raconte.html">Raconte...</a></td></tr>
+          <tr><th scope="row">Expliquer une offre complexe</th><td>Motion design 2D 60 à 90 s</td><td><a href="{{root}}agence-video.html">Agence vidéo</a></td></tr>
+          <tr><th scope="row">Animer les réseaux sociaux</th><td>Snack content 3 à 15 s par lots</td><td><a href="{{root}}offre-pour-faire-court.html">Pour Faire Court.</a></td></tr>
+          <tr><th scope="row">Recruter</th><td>Portraits RH, film de culture, onboarding</td><td><a href="{{root}}realisations/sncf-serie-onboarding.html">Étude de cas SNCF</a></td></tr>
+          <tr><th scope="row">Prouver par un client</th><td>Case study et témoignage 2 min</td><td><a href="{{root}}agence-video.html">Agence vidéo</a></td></tr>
+          <tr><th scope="row">Produire pour vos clients</th><td>Tous formats, en marque blanche</td><td><a href="{{root}}boite-de-prod.html">Boîte de prod</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
