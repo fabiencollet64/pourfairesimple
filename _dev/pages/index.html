@@ -9,7 +9,7 @@
  "kicker": "Agence vidéo · Paris · depuis 2013",
  "priority": "1.0", "changefreq": "weekly",
  "seo_note": "Requête cible : « agence vidéo Paris » et « société de production audiovisuelle Paris ». H1 unique = promesse de marque, H2 formulés en questions d'acheteur.\n  JSON-LD Organization + LocalBusiness (NAP identique à toutes les pages, geo, horaires, sameAs). Réponse directe GEO de 3 phrases sous le hero, chiffres vérifiables mis en avant.\n  Maillage : deux parcours (PME / agences), 6 réalisations, 2 offres, méthode, FAQ, ressources. Hero vidéo en boucle muette avec poster, lazy loading sur toutes les vignettes.",
- "jsonld_py": "[{'@type': 'ItemList', 'name': 'Réalisations sélectionnées', 'itemListElement': [{'@type': 'ListItem', 'position': i+1, 'item': video_ld(p)} for i, p in enumerate([q for q in PROJECTS if q['order'] <= 6])]}]"
+ "jsonld_py": "[{'@type': 'ItemList', 'name': 'Réalisations sélectionnées', 'itemListElement': [{'@type': 'ListItem', 'position': i+1, 'item': video_ld(p)} for i, p in enumerate([q for q in PROJECTS if q['slug'] in HOME_SLUGS])]}]"
 }
 -->
 <section class="hero" aria-labelledby="hero-title">
@@ -75,7 +75,7 @@
       <p class="lead">Films corporate et institutionnels, motion design 2D et 3D, social ads, portraits RH, captations et podcasts. Survolez une vignette pour lancer l'aperçu.</p>
     </div>
     <div class="work-grid reveal--stagger">
-      {{py: "".join(project_card(p, root) for p in sorted(PROJECTS, key=lambda q: q["order"]) if p["order"] <= 6)}}
+      {{py: "".join(project_card(p, root) for p in sorted(PROJECTS, key=lambda q: q["order"]) if p["slug"] in HOME_SLUGS)}}
     </div>
     <p class="mt-7 reveal"><a class="btn" href="{{root}}realisations.html">Toutes les réalisations <span class="arrow" aria-hidden="true">→</span></a></p>
     <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">

@@ -38,7 +38,7 @@ def poster(p, i):
     w, h = dims(p["ratio"])
     c1, c2, c3 = p["c1"], p["c2"], p["c3"]
     title = html.escape(p["title"])
-    client = html.escape(p["client"]).upper()
+    client = html.escape(p["client"].upper())
     fs = int(min(w, h) * 0.075)
     pad = int(min(w, h) * 0.07)
     # découpe du titre sur 2 lignes max

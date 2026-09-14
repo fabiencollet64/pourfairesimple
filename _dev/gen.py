@@ -169,10 +169,12 @@ def breadcrumb_ld(crumbs, path):
     return {"@type": "BreadcrumbList", "itemListElement": items}
 
 # ------------------------------------------------------------------ helpers réutilisés par les fragments
-def project_card(p, root, extra_class=""):
-    ratio_cls = {"wide": "work-card--wide", "tall": "work-card--tall", "square": "work-card--square", "std": ""}[p["ratio"]]
-    poster = f'{root}assets/img/posters/{p["slug"]}.svg'
-    w, h = {"wide": (1600, 900), "std": (1600, 900), "tall": (900, 1600), "square": (1200, 1200)}[p["ratio"]]
+def project_card(p, root, extra_class="", related=False):
+    ratio = "std" if related else p["ratio"]
+    ratio_cls = {"wide": "work-card--wide", "tall": "work-card--tall", "square": "work-card--square", "std": ""}[ratio]
+    suffix = "-16x9" if (related and p["ratio"] in ("tall", "square")) else ""
+    poster = f'{root}assets/img/posters/{p["slug"]}{suffix}.svg'
+    w, h = {"wide": (1600, 900), "std": (1600, 900), "tall": (900, 1600), "square": (1200, 1200)}[ratio]
     alt = f'Image de la vidéo « {p["title"]} » réalisée pour {p["client"]}, {FORMATS[p["format"]].lower()}'
     inner = f"""<div class="work-card__media"><img src="{poster}" alt="{esc(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async"><span class="work-card__play" aria-hidden="true">▶</span><span class="work-card__progress" aria-hidden="true"></span></div>
       <div class="work-card__meta"><span class="work-card__title">{esc(p["title"])}</span><span class="work-card__sub">{esc(p["client"])} · {FORMATS[p["format"]]} · {SECTEURS[p["secteur"]]}</span></div>"""
@@ -187,7 +189,7 @@ def marquee(root):
     return f'<div class="marquee" aria-label="Ils nous font confiance"><div class="marquee__track">{items}{items}</div></div>'
 
 def related_projects(root, slugs):
-    cards = [project_card(p, root) for p in PROJECTS if p["slug"] in slugs]
+    cards = [project_card(p, root, related=True) for p in PROJECTS if p["slug"] in slugs]
     return '<div class="work-grid work-grid--related reveal--stagger">' + "".join(cards) + "</div>"
 
 def video_ld(p, root_url=BASE):
@@ -200,7 +202,7 @@ def video_ld(p, root_url=BASE):
             "publisher": {"@id": ORG_ID}, "inLanguage": "fr-FR", "genre": FORMATS[p["format"]]}
 
 CONTEXT = {"SITE": SITE, "NAV": NAV, "CLIENTS": CLIENTS, "PROJECTS": PROJECTS, "FORMATS": FORMATS, "SECTEURS": SECTEURS,
-           "project_card": project_card, "marquee": marquee, "related_projects": related_projects, "video_ld": video_ld,
+           "project_card": project_card, "HOME_SLUGS": ["sncf-serie-onboarding", "trade-republic-social-ads-motion", "seloger-motion-explicatif", "lectra-film-institutionnel"], "marquee": marquee, "related_projects": related_projects, "video_ld": video_ld,
            "esc": esc, "json": json, "FAQ_ITEMS": FAQ_ITEMS, "GLOSSARY": GLOSSARY, "BASE": BASE, "ORG_ID": ORG_ID, "LB_ID": LB_ID, "SITE_ID": SITE_ID, "TODAY": TODAY}
 
 # ------------------------------------------------------------------ build

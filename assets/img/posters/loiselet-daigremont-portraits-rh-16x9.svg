@@ -1,10 +1,10 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900' role='img' aria-label='Portraits de gestionnaires — LOISELET &AMP; DAIGREMONT'>
+<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900' role='img' aria-label='Portraits de gestionnaires — LOISELET &amp; DAIGREMONT'>
 <defs><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.12 0'/></filter></defs>
 <rect width='1600' height='900' fill='#3d2b1f'/>
 <rect x='800' y='0' width='80' height='900' fill='#d4a373'/><rect x='992' y='0' width='80' height='900' fill='#d4a373'/><rect x='1184' y='0' width='80' height='900' fill='#d4a373'/><rect x='1376' y='0' width='80' height='900' fill='#d4a373'/><rect x='1568' y='0' width='80' height='900' fill='#d4a373'/>
 <rect width='1600' height='900' filter='url(#g)' opacity='0.5'/>
 <rect x='63' y='63' width='1474' height='774' fill='none' stroke='#f3efe6' stroke-opacity='0.35' stroke-width='2'/>
-<text x='86' y='113' font-family="'Inter Variable', Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size='24' font-weight='600' letter-spacing='0.12em' fill='#f3efe6'>LOISELET &AMP; DAIGREMONT</text>
+<text x='86' y='113' font-family="'Inter Variable', Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size='24' font-weight='600' letter-spacing='0.12em' fill='#f3efe6'>LOISELET &amp; DAIGREMONT</text>
 <circle cx='1504' cy='96' r='10' fill='#ff5a1f'/>
 <text x='63' y='817.0' font-family="'Inter Variable', Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size='67' font-weight='800' letter-spacing='-0.03em' fill='#f3efe6' style='paint-order:stroke' stroke='#3d2b1f' stroke-opacity='0.35' stroke-width='6'><tspan x='63' dy='0'>Portraits de gestionnaires</tspan></text>
 <text x='1514' y='814' text-anchor='end' font-family="'Inter Variable', Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size='21' font-weight='500' letter-spacing='0.1em' fill='#f3efe6' fill-opacity='0.8'>2023 · 1:00</text>
